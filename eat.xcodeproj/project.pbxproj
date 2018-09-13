@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3ACC71E7214B109400A9BB24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC71E6214B109400A9BB24 /* AppDelegate.swift */; };
-		3ACC71E9214B109400A9BB24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC71E8214B109400A9BB24 /* ViewController.swift */; };
+		3ACC71E9214B109400A9BB24 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC71E8214B109400A9BB24 /* MainVC.swift */; };
 		3ACC71EC214B109400A9BB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACC71EA214B109400A9BB24 /* Main.storyboard */; };
 		3ACC71EF214B109400A9BB24 /* eat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC71ED214B109400A9BB24 /* eat.xcdatamodeld */; };
 		3ACC71F1214B109700A9BB24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ACC71F0214B109700A9BB24 /* Assets.xcassets */; };
 		3ACC71F4214B109700A9BB24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ACC71F2214B109700A9BB24 /* LaunchScreen.storyboard */; };
 		3ACC71FF214B109700A9BB24 /* eatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC71FE214B109700A9BB24 /* eatTests.swift */; };
 		3ACC720A214B109700A9BB24 /* eatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC7209214B109700A9BB24 /* eatUITests.swift */; };
+		3ACC7219214B112400A9BB24 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACC7218214B112400A9BB24 /* CoreLocation.framework */; };
+		3ACC721B214B20F000A9BB24 /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC721A214B20F000A9BB24 /* FoodVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		3ACC71E3214B109400A9BB24 /* eat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACC71E6214B109400A9BB24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3ACC71E8214B109400A9BB24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3ACC71E8214B109400A9BB24 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3ACC71EB214B109400A9BB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3ACC71EE214B109400A9BB24 /* eat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eat.xcdatamodel; sourceTree = "<group>"; };
 		3ACC71F0214B109700A9BB24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		3ACC7205214B109700A9BB24 /* eatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACC7209214B109700A9BB24 /* eatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eatUITests.swift; sourceTree = "<group>"; };
 		3ACC720B214B109700A9BB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ACC7218214B112400A9BB24 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3ACC721A214B20F000A9BB24 /* FoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ACC7219214B112400A9BB24 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 				3ACC71FD214B109700A9BB24 /* eatTests */,
 				3ACC7208214B109700A9BB24 /* eatUITests */,
 				3ACC71E4214B109400A9BB24 /* Products */,
+				3ACC7217214B112400A9BB24 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				3ACC71E6214B109400A9BB24 /* AppDelegate.swift */,
-				3ACC71E8214B109400A9BB24 /* ViewController.swift */,
+				3ACC71E8214B109400A9BB24 /* MainVC.swift */,
 				3ACC71EA214B109400A9BB24 /* Main.storyboard */,
+				3ACC721A214B20F000A9BB24 /* FoodVC.swift */,
 				3ACC71F0214B109700A9BB24 /* Assets.xcassets */,
 				3ACC71F2214B109700A9BB24 /* LaunchScreen.storyboard */,
 				3ACC71F5214B109700A9BB24 /* Info.plist */,
@@ -126,6 +133,14 @@
 				3ACC720B214B109700A9BB24 /* Info.plist */,
 			);
 			path = eatUITests;
+			sourceTree = "<group>";
+		};
+		3ACC7217214B112400A9BB24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ACC7218214B112400A9BB24 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ACC71E9214B109400A9BB24 /* ViewController.swift in Sources */,
+				3ACC721B214B20F000A9BB24 /* FoodVC.swift in Sources */,
+				3ACC71E9214B109400A9BB24 /* MainVC.swift in Sources */,
 				3ACC71E7214B109400A9BB24 /* AppDelegate.swift in Sources */,
 				3ACC71EF214B109400A9BB24 /* eat.xcdatamodeld in Sources */,
 			);
@@ -435,6 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R48W5W68FB;
 				INFOPLIST_FILE = eat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R48W5W68FB;
 				INFOPLIST_FILE = eat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
