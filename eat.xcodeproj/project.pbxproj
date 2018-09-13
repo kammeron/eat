@@ -17,6 +17,7 @@
 		3ACC720A214B109700A9BB24 /* eatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC7209214B109700A9BB24 /* eatUITests.swift */; };
 		3ACC7219214B112400A9BB24 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACC7218214B112400A9BB24 /* CoreLocation.framework */; };
 		3ACC721B214B20F000A9BB24 /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC721A214B20F000A9BB24 /* FoodVC.swift */; };
+		3ACC721D214B22CB00A9BB24 /* FoodDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC721C214B22CB00A9BB24 /* FoodDelegates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3ACC720B214B109700A9BB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ACC7218214B112400A9BB24 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3ACC721A214B20F000A9BB24 /* FoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
+		3ACC721C214B22CB00A9BB24 /* FoodDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDelegates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				3ACC71E8214B109400A9BB24 /* MainVC.swift */,
 				3ACC71EA214B109400A9BB24 /* Main.storyboard */,
 				3ACC721A214B20F000A9BB24 /* FoodVC.swift */,
+				3ACC721C214B22CB00A9BB24 /* FoodDelegates.swift */,
 				3ACC71F0214B109700A9BB24 /* Assets.xcassets */,
 				3ACC71F2214B109700A9BB24 /* LaunchScreen.storyboard */,
 				3ACC71F5214B109700A9BB24 /* Info.plist */,
@@ -278,6 +281,7 @@
 				3ACC71E9214B109400A9BB24 /* MainVC.swift in Sources */,
 				3ACC71E7214B109400A9BB24 /* AppDelegate.swift in Sources */,
 				3ACC71EF214B109400A9BB24 /* eat.xcdatamodeld in Sources */,
+				3ACC721D214B22CB00A9BB24 /* FoodDelegates.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
