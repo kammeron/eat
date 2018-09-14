@@ -43,9 +43,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Apb-kk-Zwd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="461"/>
-                            </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8tZ-Je-3NS">
                                 <rect key="frame" x="16" y="489" width="120" height="120"/>
                                 <constraints>
@@ -73,6 +70,9 @@
                                 <rect key="frame" x="144" y="518" width="215" height="91"/>
                                 <state key="normal" title="Restaurant Details"/>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Apb-kk-Zwd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="461"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -96,6 +96,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T24-2c-rgK"/>
                     </view>
+                    <connections>
+                        <outlet property="detailsButtonText" destination="6kx-lA-EgG" id="n9l-Fg-eFM"/>
+                        <outlet property="imageView" destination="8tZ-Je-3NS" id="gc6-UP-dtf"/>
+                        <outlet property="mapView" destination="Apb-kk-Zwd" id="iwH-vt-xIm"/>
+                        <outlet property="nameLabel" destination="ThE-Uf-bBm" id="M0p-qm-HCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeq-t3-Ewg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
