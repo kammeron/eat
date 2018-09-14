@@ -15,6 +15,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager: CLLocationManager = CLLocationManager()
     var myLatitude: String = ""
     var myLongitude: String = ""
+    var myLocation: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     // functions
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
-        let myLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        myLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         myLatitude = String(location.coordinate.latitude)
         myLongitude = String(location.coordinate.longitude)
     }
@@ -53,6 +54,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let destination = navController.topViewController as! FoodVC
             destination.thisLatitude = myLatitude
             destination.thisLongitude = myLongitude
+            destination.thisLocation = myLocation
         }
     }
 }

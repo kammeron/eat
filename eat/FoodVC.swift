@@ -20,6 +20,8 @@ class FoodVC: UIViewController {
     
     var thisLatitude: String = ""
     var thisLongitude: String = ""
+    var thisLocation: CLLocationCoordinate2D?
+    var resLocation: CLLocationCoordinate2D?
     var restaurantIDs = [String]()
     var thisID: String = ""
     
@@ -28,11 +30,19 @@ class FoodVC: UIViewController {
     var detailsUrl: String = ""
     
     let key = "0c5accffd4db0798bbc5a96fc70ebf3b"
+    let span: MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+    let annotation = MKPointAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(thisLongitude)
-        print(thisLatitude)
+        
+        let region: MKCoordinateRegion = MKCoordinateRegionMake(thisLocation!, span)
+        mapView.setRegion(region, animated: true)
+        mapView.showsUserLocation = true
+        
+        
+        
+        imageView.image = UIImage(named: "sad")
         getRestaurant()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -46,7 +56,14 @@ class FoodVC: UIViewController {
     }
     
     @IBAction func eatHereButtonPressed(_ sender: UIButton) {
-        self.menuDelegate?.getMenuUrl(self, menuUrl: menuUrl)
+        if menuUrl != "" {
+            performSegue(withIdentifier: "MenuSegue", sender: sender)
+        }
+    }
+    @IBAction func detailsButtonPressed(_ sender: UIButton) {
+        if menuUrl != "" {
+            performSegue(withIdentifier: "DetailSegue", sender: sender)
+        }
     }
     
     func getRestaurant() {
@@ -83,7 +100,6 @@ class FoodVC: UIViewController {
     func getChoice() {
         let num = Int(arc4random_uniform(UInt32(restaurantIDs.count)))
         self.thisID = restaurantIDs[num]
-        print(self.thisID)
         let url = URL(string: "https://developers.zomato.com/api/v2.1/restaurant?res_id=\(self.thisID)")
         var request = URLRequest(url: url!)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
@@ -97,21 +113,27 @@ class FoodVC: UIViewController {
             do {
                 // try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                    
-                    print(jsonResult["name"]!)
+        
                     self.menuUrl = jsonResult["menu_url"] as! String
                     self.detailsUrl = jsonResult["url"] as! String
                     
                     DispatchQueue.main.async {
                         self.nameLabel.text = jsonResult["name"] as? String
                         let imgUrlString = jsonResult["thumb"] as! String
-                        print(imgUrlString)
                         if imgUrlString != "" {
                             let imgUrl = NSURL(string: imgUrlString)
-//                            print(imgUrl)
                             let data = try? Data(contentsOf: imgUrl! as URL)
                             self.imageView.image = UIImage(data: data!)
                         }
+                        let currentLocationObj = jsonResult["location"] as! NSDictionary
+                        let currentLatitude = Double(currentLocationObj["latitude"] as! String)
+                        let currentLongitude = Double(currentLocationObj["longitude"] as! String)
+                        self.resLocation = CLLocationCoordinate2D(latitude: currentLatitude!, longitude: currentLongitude!)
+                        self.annotation.coordinate = self.resLocation!
+                        self.mapView.addAnnotation(self.annotation)
+                        let coords: [CLLocationCoordinate2D] = [self.thisLocation!, self.resLocation!]
+                        let myPolyline = MKPolyline(coordinates: coords, count: coords.count)
+                        self.mapView.add(myPolyline)
                         
                     }
                 }

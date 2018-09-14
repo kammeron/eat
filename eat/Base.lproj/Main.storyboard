@@ -77,14 +77,13 @@
                                 </state>
                                 <connections>
                                     <action selector="eatHereButtonPressed:" destination="pcl-NH-je3" eventType="touchUpInside" id="74C-UQ-rVO"/>
-                                    <segue destination="jIV-O8-zKa" kind="presentation" identifier="MenuSegue" id="FFs-Tk-Kpw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kx-lA-EgG">
                                 <rect key="frame" x="152" y="513.5" width="207" height="91.5"/>
                                 <state key="normal" title="Restaurant Details"/>
                                 <connections>
-                                    <segue destination="F6Y-KS-sUy" kind="presentation" identifier="DetailSegue" id="LJE-Qg-UcS"/>
+                                    <action selector="detailsButtonPressed:" destination="pcl-NH-je3" eventType="touchUpInside" id="uMY-4s-4cH"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Apb-kk-Zwd">
@@ -129,6 +128,8 @@
                         <outlet property="imageView" destination="8tZ-Je-3NS" id="gc6-UP-dtf"/>
                         <outlet property="mapView" destination="Apb-kk-Zwd" id="iwH-vt-xIm"/>
                         <outlet property="nameLabel" destination="ThE-Uf-bBm" id="M0p-qm-HCm"/>
+                        <segue destination="jIV-O8-zKa" kind="presentation" identifier="MenuSegue" id="CCv-Ki-JCq"/>
+                        <segue destination="F6Y-KS-sUy" kind="presentation" identifier="DetailSegue" id="ros-py-d2f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeq-t3-Ewg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -188,7 +189,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
-                                    <dataDetectorTypes key="dataDetectorTypes"/>
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
