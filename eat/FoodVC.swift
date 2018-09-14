@@ -129,10 +129,10 @@ class FoodVC: UIViewController {
             menuController.stringUrl = menuUrl
         }
         
-        if(segue.identifier == "MenuSegue") {
+        else if(segue.identifier == "DetailSegue") {
             let navController = segue.destination as! UINavigationController
-            let menuController = navController.topViewController as! MenuViewController
-            menuController.stringUrl = menuUrl
+            let menuController = navController.topViewController as! DetialsViewController
+            menuController.stringUrl = detailsUrl
         }
     }
     

@@ -12,9 +12,17 @@ import WebKit
 class DetialsViewController: UIViewController {
     @IBOutlet weak var detailsWeb: WKWebView!
     
+    var stringUrl: String = ""
+    var url: URL? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        url = URL(string: stringUrl)
+        print(stringUrl)
+        let request = URLRequest(url: url!)
+
+        detailsWeb.load(request)
 
         // Do any additional setup after loading the view.
     }
