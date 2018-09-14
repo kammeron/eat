@@ -18,16 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCm-Ts-0Pi">
-                                <rect key="frame" x="158" y="318" width="59" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Let's eat"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCm-Ts-0Pi">
+                                <rect key="frame" x="16" y="289" width="343" height="88"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="jZ9-1G-rEi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <state key="normal" title="LET'S EAT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="pcl-NH-je3" kind="presentation" identifier="restaurantSegue" id="Dqr-Xe-fN2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cCm-Ts-0Pi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="96T-Vh-xtG"/>
+                            <constraint firstItem="cCm-Ts-0Pi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BnP-Db-DIc"/>
+                            <constraint firstItem="cCm-Ts-0Pi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FGN-N8-0Fk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cCm-Ts-0Pi" secondAttribute="trailing" constant="16" id="n1e-5Q-gJJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -44,51 +56,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8tZ-Je-3NS">
-                                <rect key="frame" x="16" y="489" width="120" height="120"/>
+                                <rect key="frame" x="16" y="485" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="6NN-oc-J7t"/>
                                     <constraint firstAttribute="height" constant="120" id="zi1-G6-3ha"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThE-Uf-bBm">
-                                <rect key="frame" x="144" y="489" width="215" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="215" id="YzB-Jg-7KG"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThE-Uf-bBm">
+                                <rect key="frame" x="152" y="485" width="207" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptU-XO-4yl">
-                                <rect key="frame" x="16" y="617" width="343" height="30"/>
-                                <state key="normal" title="Eat here"/>
+                                <rect key="frame" x="16" y="613" width="343" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Eat here">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="qsY-tj-UoQ" kind="presentation" id="FFs-Tk-Kpw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kx-lA-EgG">
-                                <rect key="frame" x="144" y="518" width="215" height="91"/>
+                                <rect key="frame" x="152" y="513.5" width="207" height="91.5"/>
                                 <state key="normal" title="Restaurant Details"/>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Apb-kk-Zwd">
-                                <rect key="frame" x="0.0" y="20" width="375" height="461"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="457"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="T24-2c-rgK" firstAttribute="trailing" secondItem="ptU-XO-4yl" secondAttribute="trailing" constant="16" id="B0c-5O-SQS"/>
-                            <constraint firstItem="6kx-lA-EgG" firstAttribute="leading" secondItem="8tZ-Je-3NS" secondAttribute="trailing" constant="8" id="Bza-O8-FuJ"/>
+                            <constraint firstItem="6kx-lA-EgG" firstAttribute="leading" secondItem="8tZ-Je-3NS" secondAttribute="trailing" constant="16" id="Bza-O8-FuJ"/>
+                            <constraint firstItem="ThE-Uf-bBm" firstAttribute="leading" secondItem="8tZ-Je-3NS" secondAttribute="trailing" constant="16" id="EC4-BB-g6A"/>
                             <constraint firstItem="6kx-lA-EgG" firstAttribute="top" secondItem="ThE-Uf-bBm" secondAttribute="bottom" constant="8" id="Egz-aF-CwO"/>
                             <constraint firstItem="ptU-XO-4yl" firstAttribute="leading" secondItem="T24-2c-rgK" secondAttribute="leading" constant="16" id="Hdq-p1-t37"/>
                             <constraint firstItem="Apb-kk-Zwd" firstAttribute="trailing" secondItem="T24-2c-rgK" secondAttribute="trailing" id="IsP-po-Iqu"/>
                             <constraint firstItem="8tZ-Je-3NS" firstAttribute="top" secondItem="Apb-kk-Zwd" secondAttribute="bottom" constant="8" id="JJd-Se-Gvs"/>
                             <constraint firstItem="ThE-Uf-bBm" firstAttribute="top" secondItem="Apb-kk-Zwd" secondAttribute="bottom" constant="8" id="LQz-5F-KZr"/>
                             <constraint firstItem="ptU-XO-4yl" firstAttribute="top" secondItem="8tZ-Je-3NS" secondAttribute="bottom" constant="8" id="LRt-Sg-sZC"/>
+                            <constraint firstItem="Apb-kk-Zwd" firstAttribute="trailing" secondItem="T24-2c-rgK" secondAttribute="trailing" id="Nqi-RG-G98"/>
                             <constraint firstItem="8tZ-Je-3NS" firstAttribute="top" secondItem="Apb-kk-Zwd" secondAttribute="bottom" constant="8" id="NxU-D1-ere"/>
                             <constraint firstItem="6kx-lA-EgG" firstAttribute="top" secondItem="ThE-Uf-bBm" secondAttribute="bottom" constant="8" id="O2j-ch-ez2"/>
                             <constraint firstItem="ptU-XO-4yl" firstAttribute="top" secondItem="6kx-lA-EgG" secondAttribute="bottom" constant="8" id="Q6E-ML-5J6"/>
                             <constraint firstItem="Apb-kk-Zwd" firstAttribute="leading" secondItem="T24-2c-rgK" secondAttribute="leading" id="VwC-gf-JZI"/>
                             <constraint firstItem="T24-2c-rgK" firstAttribute="bottom" secondItem="ptU-XO-4yl" secondAttribute="bottom" constant="20" id="Vz4-3T-CyS"/>
+                            <constraint firstItem="Apb-kk-Zwd" firstAttribute="top" secondItem="T24-2c-rgK" secondAttribute="top" id="bRb-aM-i2c"/>
+                            <constraint firstItem="Apb-kk-Zwd" firstAttribute="leading" secondItem="T24-2c-rgK" secondAttribute="leading" id="dHy-ea-I9D"/>
                             <constraint firstItem="Apb-kk-Zwd" firstAttribute="top" secondItem="T24-2c-rgK" secondAttribute="top" id="ix9-Xo-KFb"/>
                             <constraint firstItem="T24-2c-rgK" firstAttribute="trailing" secondItem="ThE-Uf-bBm" secondAttribute="trailing" constant="16" id="oDt-Dx-Osq"/>
                             <constraint firstItem="8tZ-Je-3NS" firstAttribute="leading" secondItem="T24-2c-rgK" secondAttribute="leading" constant="16" id="s2O-MM-ER2"/>

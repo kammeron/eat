@@ -93,7 +93,7 @@ class FoodVC: UIViewController {
                         if imgUrlString != "" {
                             let imgUrl = NSURL(string: imgUrlString)
                             print(imgUrl)
-                            let data = try? Data(contentsOf: imgUrl as! URL)
+                            let data = try? Data(contentsOf: imgUrl! as URL)
                             self.imageView.image = UIImage(data: data!)
                         }
                         
