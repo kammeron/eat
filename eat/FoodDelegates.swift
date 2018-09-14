@@ -9,5 +9,5 @@
 import UIKit
 
 protocol RandomFoodDelegate {
-    func foodVC(_ controller: FoodVC)
+    func getMenuUrl(_ controller: FoodVC, menuUrl: String)
 }

@@ -23,6 +23,10 @@ class FoodVC: UIViewController {
     var restaurantIDs = [String]()
     var thisID: String = ""
     
+    var menuDelegate: RandomFoodDelegate?
+    var menuUrl: String = ""
+    var detailsUrl: String = ""
+    
     let key = "0c5accffd4db0798bbc5a96fc70ebf3b"
     
     override func viewDidLoad() {
@@ -35,6 +39,14 @@ class FoodVC: UIViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func eatHereButtonPressed(_ sender: UIButton) {
+        self.menuDelegate?.getMenuUrl(self, menuUrl: menuUrl)
     }
     
     func getRestaurant() {
@@ -70,7 +82,7 @@ class FoodVC: UIViewController {
     
     func getChoice() {
         let num = Int(arc4random_uniform(UInt32(restaurantIDs.count)))
-        self.thisID = "17867535"
+        self.thisID = restaurantIDs[num]
         print(self.thisID)
         let url = URL(string: "https://developers.zomato.com/api/v2.1/restaurant?res_id=\(self.thisID)")
         var request = URLRequest(url: url!)
@@ -85,14 +97,18 @@ class FoodVC: UIViewController {
             do {
                 // try converting the JSON object to "Foundation Types" (NSDictionary, NSArray, NSString, etc.)
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
+                    
                     print(jsonResult["name"]!)
+                    self.menuUrl = jsonResult["menu_url"] as! String
+                    self.detailsUrl = jsonResult["url"] as! String
+                    
                     DispatchQueue.main.async {
                         self.nameLabel.text = jsonResult["name"] as? String
                         let imgUrlString = jsonResult["thumb"] as! String
                         print(imgUrlString)
                         if imgUrlString != "" {
                             let imgUrl = NSURL(string: imgUrlString)
-                            print(imgUrl)
+//                            print(imgUrl)
                             let data = try? Data(contentsOf: imgUrl! as URL)
                             self.imageView.image = UIImage(data: data!)
                         }
@@ -104,6 +120,20 @@ class FoodVC: UIViewController {
             }
         })
         task.resume()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "MenuSegue") {
+            let navController = segue.destination as! UINavigationController
+            let menuController = navController.topViewController as! MenuViewController
+            menuController.stringUrl = menuUrl
+        }
+        
+        if(segue.identifier == "MenuSegue") {
+            let navController = segue.destination as! UINavigationController
+            let menuController = navController.topViewController as! MenuViewController
+            menuController.stringUrl = menuUrl
+        }
     }
     
     override func didReceiveMemoryWarning() {

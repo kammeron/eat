@@ -19,6 +19,7 @@
 		3ACC721B214B20F000A9BB24 /* FoodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC721A214B20F000A9BB24 /* FoodVC.swift */; };
 		3ACC721D214B22CB00A9BB24 /* FoodDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACC721C214B22CB00A9BB24 /* FoodDelegates.swift */; };
 		3E716293214B92EC009BFFE1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E716292214B92EC009BFFE1 /* MenuViewController.swift */; };
+		3E716295214C23CA009BFFE1 /* DetialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E716294214C23CA009BFFE1 /* DetialsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3ACC721A214B20F000A9BB24 /* FoodVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodVC.swift; sourceTree = "<group>"; };
 		3ACC721C214B22CB00A9BB24 /* FoodDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDelegates.swift; sourceTree = "<group>"; };
 		3E716292214B92EC009BFFE1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3E716294214C23CA009BFFE1 /* DetialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetialsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				3ACC71E6214B109400A9BB24 /* AppDelegate.swift */,
 				3ACC71E8214B109400A9BB24 /* MainVC.swift */,
 				3ACC71EA214B109400A9BB24 /* Main.storyboard */,
+				3E716294214C23CA009BFFE1 /* DetialsViewController.swift */,
 				3E716292214B92EC009BFFE1 /* MenuViewController.swift */,
 				3ACC721A214B20F000A9BB24 /* FoodVC.swift */,
 				3ACC721C214B22CB00A9BB24 /* FoodDelegates.swift */,
@@ -282,6 +285,7 @@
 			files = (
 				3ACC721B214B20F000A9BB24 /* FoodVC.swift in Sources */,
 				3E716293214B92EC009BFFE1 /* MenuViewController.swift in Sources */,
+				3E716295214C23CA009BFFE1 /* DetialsViewController.swift in Sources */,
 				3ACC71E9214B109400A9BB24 /* MainVC.swift in Sources */,
 				3ACC71E7214B109400A9BB24 /* AppDelegate.swift in Sources */,
 				3ACC71EF214B109400A9BB24 /* eat.xcdatamodeld in Sources */,

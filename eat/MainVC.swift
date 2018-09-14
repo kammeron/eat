@@ -47,7 +47,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if segue.identifier == "restaurantSegue" {
             print("lat: " + myLatitude)
             print("long: " + myLongitude)
-            let destination = segue.destination as! FoodVC
+//            let destination = segue.destination as! FoodVC
+            
+            let navController = segue.destination as! UINavigationController
+            let destination = navController.topViewController as! FoodVC
             destination.thisLatitude = myLatitude
             destination.thisLongitude = myLongitude
         }
